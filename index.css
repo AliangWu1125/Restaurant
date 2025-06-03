@@ -1,0 +1,511 @@
+body {
+	font-family: Noto Sans TC;
+	background-color: #eaeae4;
+	letter-spacing: 2px;
+}
+.container {
+	display: flex;
+	width: 100%;
+}
+.underline {
+	border-bottom: 2px solid #9f9f9f;
+	padding-bottom: 3px;
+}
+.sidebar {
+	width: 200px;
+	left: 50px;
+	top: 60px;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+.sidebar .logo {
+	margin-bottom: 42px;
+}
+.sidebar a {
+	display: block;
+	padding: 1ex 1em;
+	text-decoration: none;
+	color: #000;
+	transition: background 0.2s;
+}
+.sidebar-menu a {
+	font-size: 24px;
+	line-height: 42px;
+}
+.sidebar-submenu a {
+	font-size: 20px;
+	line-height: 30px;
+}
+.sidebar-menu a:hover {
+	color: #617f99;
+	background-color: #d6dfe6;
+	border-radius: 5px;
+}
+.sidebar-menu li:hover .sidebar-submenu {
+	display: block;
+}
+.sidebar-submenu {
+	display: none;
+	background-color: #fff;
+	padding: 0.5em 0.5em;
+	border-radius: 5px;
+}
+
+.hero {
+	margin-left: 287px;
+	position: relative;
+	width: 1632px;
+	height: 886px;
+}
+
+.sliders {
+	border-bottom-left-radius: 85px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	width: 1632px;
+	height: 886px;
+}
+.slider-txt1 {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	font-family: Noto Serif TC;
+	color: #fff;
+	font-size: 64px;
+	letter-spacing: 10px;
+	z-index: 2;
+}
+.slider-txt2 {
+	position: absolute;
+	top: 75%;
+	left: 60%;
+	color: #fff;
+	font-family: Noto Serif TC;
+	font-size: 64px;
+	letter-spacing: 10px;
+	z-index: 2;
+}
+
+.slider img {
+	width: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.slider-buttons {
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+}
+
+.slider-btn {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	margin: 0 5px;
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.slider-btn.active {
+	background-color: #333;
+}
+
+.about {
+	margin-top: 130px;
+	width: 1920px;
+	background-color: #e2eaf1;
+	background-image: linear-gradient(to bottom left, #8f9fad 20%, #e2eaf1 100%)
+		transparent;
+}
+
+.about-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.about-txt {
+	transform: translateY(50px);
+	display: flex;
+	flex-direction: column;
+}
+.about-txt h2 {
+	font-size: 42px;
+	line-height: 50px;
+	margin-bottom: 93px;
+}
+
+.about-txt p {
+	width: 544px;
+	font-size: 24px;
+	line-height: 42px;
+	color: #5a5a5a;
+	letter-spacing: 2px;
+}
+.about-img:first-of-type {
+	transform: translateY(50px);
+}
+.about-img:last-of-type {
+	align-self: flex-start;
+}
+.about-images {
+	display: grid;
+	justify-content: space-evenly;
+}
+.about-images img:nth-child(1) {
+	align-self: end;
+	justify-self: start;
+}
+.about-images img:nth-child(2) {
+	align-self: center;
+}
+.about-images img:nth-child(3) {
+	grid-column: 3;
+	grid-row: 1;
+	align-self: center;
+	justify-self: end;
+}
+.seasonal-section {
+	margin-top: 130px;
+	padding: 20px;
+}
+.seasonal-txt {
+	margin: 0 285px;
+	display: grid;
+	grid-template-columns: 40% 30% 30%;
+}
+.seasonal-txt1 {
+	margin-top: 70px;
+	color: #757575;
+}
+
+.seasonal-title h2 {
+	font-size: 42px;
+	line-height: 5opx;
+}
+.seasonal-txt1 h3 {
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.seasonal-txt1 p {
+	font-size: 20px;
+	line-height: 30px;
+}
+.seasonal-content {
+	overflow: hidden; /* 裁切超出容器的內容 */
+	width: 100%;
+	max-width: 1920px; /* 根據你的需求調整 */
+	margin: 20px auto;
+}
+
+.carousel-container2 {
+	overflow: hidden; /* 確保只顯示滑動軌道的可見部分 */
+	width: 100%;
+}
+
+.carousel-track2 {
+	display: flex; /* 讓圖片水平排列 */
+	position: relative; /* 方便 JavaScript 控制位置 */
+}
+
+.slide-container2 {
+	margin-right: 20px; /* 設定圖片之間的間隔 */
+}
+
+.carousel-track2 img {
+	width: auto; /* 根據圖片實際寬度 */
+	height: auto;
+	max-height: 400px; /* 根據你的需求調整最大高度 */
+	max-width: none; /* 確保圖片不會縮小以適應容器 */
+	transition: transform 0.5s ease-in-out; /* 為放大效果添加平滑過渡 */
+}
+
+.carousel-container2:hover .carousel-track2 {
+	animation-play-state: paused; /* 滑鼠懸停時停止動畫 */
+}
+.recommend {
+	margin-top: 130px;
+	padding: 80px 20px;
+	position: relative;
+}
+
+.recommend h2 {
+	text-align: center;
+	font-size: 42px;
+	line-height: 50px;
+	margin-bottom: 100px;
+}
+
+.dish-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 100px;
+	gap: 60px;
+	flex-wrap: wrap;
+}
+
+.dish-item.right {
+	flex-direction: row-reverse;
+}
+
+.dish-img img {
+	width: 800px;
+	height: 800px;
+	object-fit: cover;
+	border-radius: 50%;
+	/* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.dish-info {
+	max-width: 760px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.dish-info h3 {
+	font-size: 36px;
+	line-height: 40px;
+	color: #cf9f94;
+	margin-bottom: 5px;
+}
+.dish-info h4 {
+	font-size: 24px;
+	line-height: 42px;
+	color: #b0abaa;
+}
+.dish-info p {
+	font-size: 20px;
+	line-height: 30px;
+	color: #666666;
+}
+.price {
+	font-size: 36px;
+	line-height: 40px;
+	color: #222;
+	text-align: center;
+}
+
+.price span {
+	font-size: 96px;
+	color: #617f99;
+	margin-left: 6px;
+	font-weight: bold;
+}
+
+.palm-top {
+	width: 18%;
+	position: absolute;
+	top: -5%;
+	right: 0;
+	transform: scaleX(-1);
+}
+.palm-bottom {
+	width: 18%;
+	position: absolute;
+	top: 55%;
+	left: 0;
+}
+
+.menu-section {
+	position: relative;
+	text-align: center;
+	margin-top: 130px;
+}
+
+.menu-section h2 {
+	font-size: 42px;
+	line-height: 50px;
+	margin-bottom: 50px;
+}
+.menu-carousel::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("menu-back.jpg") center/cover no-repeat;
+	opacity: 0.2;
+	z-index: 0;
+}
+
+.menu-carousel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.menu-card {
+	display: flex;
+	align-items: center;
+	gap: 220px;
+	position: relative;
+	padding: 20px 0;
+	justify-content: space-between;
+	transition: transform 0.8s;
+}
+.menu-card img {
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+
+	object-fit: cover;
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.menu-card img,
+.menu-card .menu-content {
+	opacity: 0; /* 預設透明 */
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+.menu-card img {
+	animation-delay: 0.2s;
+}
+
+.menu-card .menu-content {
+	animation-delay: 0.4s;
+}
+
+.menu-content {
+	text-align: center;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.menu-content h3 {
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.menu-content h4 {
+	font-size: 20px;
+	line-height: 30px;
+	color: #818181;
+}
+
+.menu-content .price {
+	font-size: 24px;
+	font-weight: bold;
+	color: #555;
+}
+.nav-button {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.nav-button img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	pointer-events: none; /* 確保點擊觸發在 button，而不是 image */
+}
+
+.nav-button.left {
+	left: 60%;
+	z-index: 1;
+}
+
+.nav-button.right {
+	right: 5%;
+	z-index: 1;
+}
+.reservation {
+	/* position: relative; */
+	margin-top: 130px;
+	padding: 0 15%;
+}
+.reservation-content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.reservation-img img {
+	width: 100%;
+}
+.reservation-txt {
+	/* display: grid; */
+
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	top: 45%;
+	gap: 30px;
+}
+.reservation-txt h2 {
+	font-size: 42px; /* 標題字體大小 */
+	line-height: 50px;
+	margin-bottom: 2%;
+}
+
+.reservation-txt p {
+	font-size: 36px; /* 副標題字體大小 */
+	line-height: 40px;
+	margin-bottom: 15%;
+}
+
+.reservation-button {
+	/*display: block;  讓按鈕可以設定內邊距和寬高 */
+	background-color: #fff; /* 按鈕背景色 */
+	color: #617f99; /* 按鈕文字顏色 */
+	padding: 3% 5%;
+	text-decoration: none; /* 移除連結底線 */
+	border-radius: 100px; /* 圓角 */
+	font-size: 20px; /* 按鈕文字大小 */
+	transition: background-color 0.3s ease; /* Hover 效果 */
+}
+
+.reservation-button:hover {
+	background-color: #d6dfe6; /* Hover 時的背景色 */
+}
+.footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3% 0%;
+	gap: 15%;
+}
+
+.footer-txt {
+	position: relative;
+	color: #617f99;
+}
+
+.footer-txt::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -20%;
+	width: 0.1%;
+	height: 100%;
+	background-color: #000;
+}
+.footer-txt p {
+	font-size: 24px;
+	line-height: 42px;
+}
+.footer-icon {
+	display: flex;
+	gap: 80%;
+}

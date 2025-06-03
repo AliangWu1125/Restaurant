@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>暖嶼線上訂位</title>
+		<link rel="stylesheet" href="react.css" />
+		<link rel="stylesheet" href="reservation.css" />
+	</head>
+	<body>
+		<aside class="sidebar">
+			<nav>
+				<div class="logo">
+					<a href="index.html">
+						<img src="other-pic/logo.png" alt="logo" />
+					</a>
+				</div>
+				<ul class="sidebar-menu">
+					<li>
+						<a href="#">關於暖嶼</a>
+						<ul class="sidebar-submenu">
+							<li><a href="home.html#about">概念</a></li>
+							<li><a href="home.html#space">空間</a></li>
+							<li><a href="team.html">團隊</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">當季風味</a>
+						<ul class="sidebar-submenu">
+							<li><a href="ingredient.html">食材故事</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">菜單</a>
+						<ul class="sidebar-submenu">
+							<li><a href="index.html#recommend">主廚推薦</a></li>
+							<li><a href="index.html#lselect">當季精選</a></li>
+							<li><a href="menu.html">完整菜單</a></li>
+						</ul>
+					</li>
+					<li><a href="reservation.html">線上訂位</a></li>
+					<li><a href="contactus.html">聯絡我們</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main class="main-content">
+			<div class="reservation-top">
+				<img src="reservation-pic/reservation.png" alt="" />
+			</div>
+			<h2 class="resercation-title">暖嶼餐酒館</h2>
+			<h3 class="section-subtitle"><span class="underline">線上</span>訂位</h3>
+			<div class="reservation-section">
+				<form id="reservationForm">
+					<div class="form-group">
+						<label for="name">姓名</label>
+						<input type="text" id="name" name="name" placeholder="您的姓名" />
+					</div>
+					<div class="form-group">
+						<label for="guests">人數</label>
+						<input type="number" id="guests" name="guests" min="1" value="1" />
+					</div>
+					<div class="form-group date-time">
+						<div class="date-group">
+							<label for="date">日期</label>
+							<input type="date" id="date" name="date" />
+						</div>
+						<div class="time-group">
+							<label for="time">時間</label>
+							<input type="time" id="time" name="time" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="notes">備註</label>
+						<textarea
+							id="notes"
+							name="notes"
+							placeholder="特殊需求 (可選)"
+						></textarea>
+					</div>
+					<button type="button" class="submit-button" id="submitReservation">
+						線上訂位
+					</button>
+				</form>
+				<div class="reservation-image">
+					<img src="reservation-pic/reservation(1).png" alt="訂位示意圖" />
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-content">
+				<img src="other-pic/logo.png" alt="logo" />
+				<div class="footer-txt">
+					<p>營業時間:08:30-22:00</p>
+					<p>餐廳電話:(03)425-1108</p>
+					<p>餐廳位置:320桃園市中壢區復興路46號9樓</p>
+				</div>
+				<div class="footer-icon">
+					<a href="https://www.instagram.com/"
+						><img src="other-pic/Vector.png" alt="Instagram"
+					/></a>
+					<a href="https://www.facebook.com/?locale=zh_TW"
+						><img src="other-pic/Vector (1).png" alt="Facebook"
+					/></a>
+				</div>
+			</div>
+		</footer>
+		<img src="other-pic/pngwing.com.png" alt="裝飾圖" class="palm" />
+	</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+	font-family: Noto Sans TC;
+	background-color: #eaeae4;
+	letter-spacing: 2px;
+}
+.underline {
+	border-bottom: 2px solid #9f9f9f;
+	padding-bottom: 3px;
+}
+.sidebar {
+	width: 200px;
+	left: 50px;
+	top: 60px;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+.sidebar .logo {
+	margin-bottom: 42px;
+}
+.sidebar a {
+	display: block;
+	padding: 1ex 1em;
+	text-decoration: none;
+	color: #000;
+	transition: background 0.2s;
+}
+.sidebar-menu a {
+	font-size: 24px;
+	line-height: 42px;
+}
+.sidebar-submenu a {
+	font-size: 20px;
+	line-height: 30px;
+}
+.sidebar-menu a:hover {
+	color: #617f99;
+	background-color: #d6dfe6;
+	border-radius: 5px;
+}
+.sidebar-menu li:hover .sidebar-submenu {
+	display: block;
+}
+.sidebar-submenu {
+	display: none;
+	background-color: #fff;
+	padding: 0.5em 0.5em;
+	border-radius: 5px;
+}
+.team-content {
+	padding: 15%;
+}
+.team-title {
+	text-align: center;
+}
+.team-title span {
+	font-size: 42px;
+	line-height: 50px;
+}
+
+.team-cards {
+	display: flex;
+	justify-content: center;
+	padding: 5% 1%;
+	gap: 1%;
+}
+.team-card {
+	display: grid;
+	gap: 5%;
+}
+.card-pic {
+	position: relative;
+}
+.contact {
+	position: absolute;
+	background-color: rgba(217, 217, 217, 0.6);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+	gap: 8%;
+}
+.card-pic:hover .contact {
+	opacity: 1;
+}
+.card-txt {
+	text-align: center;
+	display: grid;
+	gap: 5%;
+}
+.card-txt h3 {
+	font-size: 36px;
+	line-height: 40px;
+}
+.card-txt p {
+	font-size: 24px;
+	line-height: 42px;
+}
+.palm {
+	width: 18%;
+	position: absolute;
+	transform: scaleX(-1);
+	right: 0;
+	top: 0;
+}
+.footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3% 0%;
+	gap: 15%;
+}
+
+.footer-txt {
+	position: relative;
+	color: #617f99;
+}
+
+.footer-txt::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -20%;
+	width: 0.1%;
+	height: 100%;
+	background-color: #000;
+}
+.footer-txt p {
+	font-size: 24px;
+	line-height: 42px;
+}
+.footer-icon {
+	display: flex;
+	gap: 80%;
+}
