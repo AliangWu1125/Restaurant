@@ -1,20 +1,20 @@
 body {
 	font-family: Noto Sans TC;
 	background-color: #eaeae4;
-	letter-spacing: 2px;
+	letter-spacing: 0.125rem;
 }
 .container {
 	display: flex;
 	width: 100%;
 }
 .underline {
-	border-bottom: 2px solid #9f9f9f;
-	padding-bottom: 3px;
+	border-bottom: 0.125rem solid #9f9f9f;
+	padding-bottom: 0.1875rem;
 }
 .sidebar {
-	width: 200px;
-	left: 50px;
-	top: 60px;
+	width: 12.5rem;
+	left: 3.125rem;
+	top: 3.75rem;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -25,23 +25,23 @@ body {
 }
 .sidebar a {
 	display: block;
-	padding: 1ex 1em;
+	padding: 0.5rem 1rem;
 	text-decoration: none;
 	color: #000;
 	transition: background 0.2s;
 }
 .sidebar-menu a {
-	font-size: 24px;
-	line-height: 42px;
+	font-size: 1.5rem;
+	line-height: 2.625rem;
 }
 .sidebar-submenu a {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
 }
 .sidebar-menu a:hover {
 	color: #617f99;
 	background-color: #d6dfe6;
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 }
 .sidebar-menu li:hover .sidebar-submenu {
 	display: block;
@@ -49,8 +49,8 @@ body {
 .sidebar-submenu {
 	display: none;
 	background-color: #fff;
-	padding: 0.5em 0.5em;
-	border-radius: 5px;
+	padding: 0.5rem 0.5rem;
+	border-radius: 0.3125rem;
 }
 .about-content {
 	display: grid;
@@ -59,21 +59,21 @@ body {
 	gap: 2%;
 }
 .about-title h2 {
-	font-size: 42px;
-	line-height: 50px;
+	font-size: 2.625rem;
+	line-height: 3.125rem;
 }
 .about-pic {
 	display: grid;
 	gap: 5%;
 }
 .about-txt h3 {
-	font-size: 36px;
-	line-height: 40px;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 }
 .about-txt p {
-	font-size: 24px;
-	line-height: 42px;
-	color: 666666;
+	font-size: 1.5rem;
+	line-height: 2.625rem;
+	color: #666666;
 }
 .space-content {
 	margin-top: 10%;
@@ -91,18 +91,18 @@ body {
 	gap: 10%;
 }
 .space-txt h3 {
-	font-size: 36px;
-	line-height: 40px;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 	color: #fff;
 }
 .space-txt h4 {
-	font-size: 24px;
-	line-height: 42px;
+	font-size: 1.5rem;
+	line-height: 2.625rem;
 	color: #d6dfe6;
 }
 .space-txt p {
-	font-size: 24px;
-	line-height: 42px;
+	font-size: 1.5rem;
+	line-height: 2.625rem;
 	color: #9eadb8;
 }
 .palm {
@@ -116,7 +116,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 3% 0%;
+	padding: 3% 0;
 	gap: 15%;
 }
 
@@ -130,13 +130,13 @@ body {
 	position: absolute;
 	top: 0;
 	left: -20%;
-	width: 0.1%;
+	width: 0.0625rem;
 	height: 100%;
 	background-color: #000;
 }
 .footer-txt p {
-	font-size: 24px;
-	line-height: 42px;
+	font-size: 1.5rem;
+	line-height: 2.625rem;
 }
 .footer-icon {
 	display: flex;
