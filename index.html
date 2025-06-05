@@ -90,7 +90,7 @@
 		<div class="about">
 			<div class="about-content">
 				<div class="about-img">
-					<img src="index-pic/pic.png" alt="restaurant1" />
+					<img src="index-pic/pic.min.png" alt="restaurant1" />
 				</div>
 				<div class="about-txt">
 					<h2><span class="underline">關於</span>暖嶼</h2>
@@ -101,13 +101,13 @@
 					</p>
 				</div>
 				<div class="about-img">
-					<img src="index-pic/pic (1).png" alt="view" />
+					<img src="index-pic/pic (1).min.png" alt="view" />
 				</div>
 			</div>
 			<div class="about-images">
-				<img src="index-pic/pic (4).png" alt="view" />
-				<img src="index-pic/pic (3).png" alt="view" />
-				<img src="index-pic/pic (2).png" alt="view" />
+				<img src="index-pic/pic (4).min.png" alt="view" />
+				<img src="index-pic/pic (3).min.png" alt="view" />
+				<img src="index-pic/pic (2).min.png" alt="view" />
 			</div>
 		</div>
 		<div class="seasonal-section">
@@ -207,20 +207,22 @@
 		<section class="menu-section" id="select">
 			<h2><span class="underline">精選</span>菜單</h2>
 			<div class="menu-carousel">
-				<button class="nav-button left" onclick="prevMenu()">
-					<img src="index-pic/prev.png" alt="" />
-				</button>
 				<div class="menu-card" id="menu">
-					<img src="index-pic/duck.jpg" alt="主餐" />
+					<div class="menu-pic">
+						<img src="index-pic/duck.jpg" alt="主餐" />
+					</div>
 					<div class="menu-content">
+						<button class="nav-button left" onclick="prevMenu()">
+							<img src="index-pic/prev.png" alt="" />
+						</button>
 						<h3>暖嶼炭烤櫻桃鴨胸</h3>
 						<h4>暖嶼炭烤櫻桃鴨胸佐紅麴麥與金桔醬</h4>
-						<div class="price">NT$ <span>310</span></div>
+						<div class="price">NT$<span>310</span></div>
+						<button class="nav-button right" onclick="nextMenu()">
+							<img src="index-pic/next.png" alt="" />
+						</button>
 					</div>
 				</div>
-				<button class="nav-button right" onclick="nextMenu()">
-					<img src="index-pic/next.png" alt="" />
-				</button>
 			</div>
 		</section>
 		<section class="reservation">

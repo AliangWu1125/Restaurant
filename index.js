@@ -99,11 +99,20 @@ const menu = document.getElementById("menu");
 
 function updateMenu() {
 	const content = menuItems[menuIndex];
-	menu.innerHTML = `<img src="${content.img}" alt="圖片">
+	menu.innerHTML = `<div class="menu-pic">
+						<img src="${content.img}" alt="主餐" />
+					</div>
 <div class="menu-content">
 <h3>${content.title}</h3>
 <h4>${content.desc}</h4>
-<div class="price">NT$ <span>${content.price}</span></div></div>`;
+<div class="price">NT$ <span>${content.price}</span></div>
+<button class="nav-button left" onclick="prevMenu()">
+							<img src="index-pic/prev.png" alt="" />
+						</button>
+						<button class="nav-button right" onclick="nextMenu()">
+							<img src="index-pic/next.png" alt="" />
+						</button>
+</div>`;
 }
 
 function nextMenu() {
