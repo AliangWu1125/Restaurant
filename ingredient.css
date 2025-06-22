@@ -11,10 +11,15 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1em 1ex;
+	padding: 0.5em 1ex;
 	background-color: #fff;
 	max-width: 1920px;
-	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	transition: top 0.5s ease;
 }
 .logo {
 	/* max-width: calc(213 / 1920 * 100vw); */
