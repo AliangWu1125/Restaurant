@@ -4,242 +4,280 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>暖嶼首頁</title>
+		<link rel="icon" href="other-pic/logoicon.png" type="image/png" />
 		<link rel="stylesheet" href="react.css" />
 		<link rel="stylesheet" href="index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div class="container">
-			<aside class="sidebar">
-				<nav>
-					<div class="logo">
-						<a href="index.html">
-							<img src="other-pic/logo.png" alt="logo" />
-						</a>
+		<header>
+			<nav class="header">
+				<div class="logo">
+					<a href="index.html"><img src="other-pic/logo.svg" alt="index" /></a>
+				</div>
+				<ul id="menu" class="menu">
+					<li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu1"
+							>關於暖嶼</a
+						>
+						<ul id="aboutsubmenu1" class="submenu">
+							<li><a href="about.html#about">概念</a></li>
+							<li><a href="about.html#space">空間</a></li>
+							<li><a href="team.html">團隊</a></li>
+							<li><button class="back-btn">返回</button></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu2"
+							>當季風味</a
+						>
+						<ul id="aboutsubmenu2" class="submenu">
+							<li><a href="ingredient.html">產地故事</a></li>
+							<li><button class="back-btn">返回</button></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu3"
+							>菜單</a
+						>
+						<ul id="aboutsubmenu3" class="submenu">
+							<li><a href="#recommend">主廚推薦</a></li>
+							<li><a href="#selected">當季精選</a></li>
+							<li><a href="menu.html">完整菜單</a></li>
+							<li><button class="back-btn">返回</button></li>
+						</ul>
+					</li>
+					<li><a href="reservation.html">線上訂位</a></li>
+					<li><a href="contactus.html">聯絡我們</a></li>
+				</ul>
+				<div class="hbmenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+		<section class="banner">
+			<div class="sliders">
+				<div class="slider">
+					<div class="slider-img">
+						<img src="index-pic/view01.png" alt="veiw" id="slider-image" />
 					</div>
-					<ul class="sidebar-menu">
-						<li>
-							<a href="#">關於暖嶼</a>
-							<ul class="sidebar-submenu">
-								<li><a href="about.html#about">概念</a></li>
-								<li><a href="about.html#space">空間</a></li>
-								<li><a href="team.html">團隊</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">當季風味</a>
-							<ul class="sidebar-submenu">
-								<li><a href="ingredient.html">食材故事</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">菜單</a>
-							<ul class="sidebar-submenu">
-								<li><a href="#recommend">主廚推薦</a></li>
-								<li><a href="#select">當季精選</a></li>
-								<li><a href="menu.html">完整菜單</a></li>
-							</ul>
-						</li>
-						<li><a href="reservation.html">線上訂位</a></li>
-						<li><a href="contactus.html">聯絡我們</a></li>
-					</ul>
-				</nav>
-			</aside>
-
-			<section class="hero">
-				<div class="sliders">
-					<div class="slider">
-						<div class="slider-img">
-							<img src="index-pic/view01.jpg" alt="veiw" id="slider-image" />
-						</div>
-						<div class="slider-txt1"><span>在地風土</span></div>
-						<div class="slider-txt2"><span>暖心款待</span></div>
+					<div class="slider-title1" id="slider-title1">
+						<span>在地風土</span>
 					</div>
-
-					<div class="slider">
-						<div class="slider-img">
-							<img src="index-pic/view02.jpg" alt="view" id="slider-image" />
-						</div>
-						<div class="slider-txt1"><span>在地風土</span></div>
-						<div class="slider-txt2"><span>暖心款待</span></div>
-					</div>
-
-					<div class="slider">
-						<div class="slider-img">
-							<img src="index-pic/view04.jpg" alt="view" id="slider-image" />
-						</div>
-						<div class="slider-txt1"><span>在地風土</span></div>
-						<div class="slider-txt2"><span>暖心款待</span></div>
-					</div>
-
-					<div class="slider">
-						<div class="slider-img">
-							<img src="index-pic/view05.jpg" alt="veiw" id="slider-image" />
-						</div>
-						<div class="slider-txt1"><span>在地風土</span></div>
-						<div class="slider-txt2"><span>暖心款待</span></div>
+					<div class="slider-title2" id="slider-title2">
+						<span>暖心款待</span>
 					</div>
 				</div>
-				<div class="slider-buttons">
-					<button class="slider-btn" data-index="0"></button>
-					<button class="slider-btn" data-index="1"></button>
-					<button class="slider-btn" data-index="2"></button>
-					<button class="slider-btn" data-index="3"></button>
-				</div>
-			</section>
-		</div>
-		<div class="about">
+			</div>
+			<div class="slider-buttons">
+				<button class="slider-btn" data-index="0"></button>
+				<button class="slider-btn" data-index="1"></button>
+				<button class="slider-btn" data-index="2"></button>
+				<button class="slider-btn" data-index="3"></button>
+			</div>
+		</section>
+		<section class="about">
 			<div class="about-content">
 				<div class="about-img">
-					<img src="index-pic/pic.min.png" alt="restaurant1" />
+					<img src="index-pic/pic.png" alt="" />
 				</div>
 				<div class="about-txt">
 					<h2><span class="underline">關於</span>暖嶼</h2>
-					<p>
+					<h3>
 						暖嶼品牌故事｜一座島嶼，一份溫度，一道料理暖意，是一個四季記錄在地記憶的地方。
 						在這塊島嶼上，我們讓當地農產走進餐桌，握著流失和正身的時刻，與萬物對話，向山海靠攏，只有了更多台灣這塊寶貴的藍味。
 						「暖嶼」誕生於想傳遞的初心，也擁有我們對家的想念與島嶼的愛。
-					</p>
+					</h3>
 				</div>
 				<div class="about-img">
-					<img src="index-pic/pic (1).min.png" alt="view" />
+					<img src="index-pic/pic (1).png" alt="view" />
 				</div>
 			</div>
 			<div class="about-images">
-				<img src="index-pic/pic (4).min.png" alt="view" />
-				<img src="index-pic/pic (3).min.png" alt="view" />
-				<img src="index-pic/pic (2).min.png" alt="view" />
+				<div class="img01"><img src="index-pic/pic (4).png" alt="view" /></div>
+				<div class="img02"><img src="index-pic/pic (3).png" alt="view" /></div>
+				<div class="img03"><img src="index-pic/pic (2).png" alt="view" /></div>
 			</div>
-		</div>
-		<div class="seasonal-section">
-			<div class="seasonal-txt">
+		</section>
+		<section class="seasonal">
+			<div class="seasonal-section">
 				<div class="seasonal-title">
 					<h2><span class="underline">當季</span>風味</h2>
 				</div>
-				<div class="seasonal-txt1">
+				<div class="seasonal-txt">
 					<h3>料理哲學</h3>
-					<p>
+					<h4>
 						每一道菜以「一種在地食材」為主角，搭配主廚故事與節氣詮釋主打「慢餐體驗」，邀請客人用五感品味島嶼的溫度與風貌。
-					</p>
+					</h4>
 				</div>
-				<div class="seasonal-txt1">
+				<div class="seasonal-txt">
 					<h3>永續理念</h3>
-					<p>
+					<h4>
 						與小農和漁村直接合作採用季節性選材，避免過度採集食材處理零浪費，兼顧美味與責任。
-					</p>
+					</h4>
 				</div>
 			</div>
-
-			<div class="seasonal-content">
-				<div class="carousel-container2">
-					<div class="carousel-track2">
-						<div class="slide-container2">
-							<img src="ingredient-pic/pic (1).png" alt="當季食材 1" />
+			<div class="seasonal-cards">
+				<div class="seasonal-card">
+					<div class="seasonal-card-img">
+						<img src="seasonal-pic/pic01.png" alt="" />
+						<div class="seasonal-hover">
+							<p>陽光飽滿的熱帶果香</p>
+							<a href="ingredient.html">探索菜單</a>
 						</div>
-						<div class="slide-container2">
-							<img src="ingredient-pic/pic (2).png" alt="當季食材 2" />
+					</div>
+					<div class="seasonal-card-txt">
+						<h3>鳳梨</h3>
+						<h4>產地：屏東內埔／台南關廟（依季節）</h4>
+					</div>
+				</div>
+				<div class="seasonal-card">
+					<div class="seasonal-card-img">
+						<img src="seasonal-pic/pic02.png" alt="" />
+						<div class="seasonal-hover">
+							<p>日照充足、酸甜濃郁</p>
+							<a href="ingredient.html">探索菜單</a>
 						</div>
-						<div class="slide-container2">
-							<img src="ingredient-pic/pic (3).png" alt="當季食材 3" />
+					</div>
+					<div class="seasonal-card-txt">
+						<h3>番茄</h3>
+						<h4>產地：台南善化</h4>
+					</div>
+				</div>
+				<div class="seasonal-card">
+					<div class="seasonal-card-img">
+						<img src="seasonal-pic/pic03.png" alt="" />
+						<div class="seasonal-hover">
+							<p>被稱為(穀物界紅寶石)</p>
+							<a href="ingredient.html">探索菜單</a>
 						</div>
-						<div class="slide-container2">
-							<img src="ingredient-pic/pic (4).png" alt="當季食材 3" />
+					</div>
+					<div class="seasonal-card-txt">
+						<h3>紅藜</h3>
+						<h4>產地：花蓮玉里部落</h4>
+					</div>
+				</div>
+				<div class="seasonal-card">
+					<div class="seasonal-card-img">
+						<img src="seasonal-pic/pic04.png" alt="" />
+						<div class="seasonal-hover">
+							<p>有機栽培,肉質細緻甜潤</p>
+							<a href="ingredient.html">探索菜單</a>
 						</div>
-						<div class="slide-container2">
-							<img src="ingredient-pic/pic (5).png" alt="當季食材 3" />
-						</div>
+					</div>
+					<div class="seasonal-card-txt">
+						<h3>南瓜</h3>
+						<h4>產地：彰化田中（小農自然農法栽種）</h4>
 					</div>
 				</div>
 			</div>
-		</div>
-		<section class="recommend" id="recommend">
-			<h2><span class="underline">主廚</span>推薦</h2>
-			<div class="dish-item left">
-				<div class="dish-img">
-					<img src="index-pic/skewers.jpg" alt="島嶼鹹香" />
-				</div>
-				<div class="dish-info">
-					<h3><span class="underline">島嶼</span>鹹香</h3>
-					<h4>馬告鹹豬肉串佐鳳梨莎莎</h4>
-					<p>
-						選自台灣山區的馬告（山胡椒），搭配醃漬豬肉以低溫炭烤，香氣隨煙升溫。酸甜的鳳梨莎莎與香菜點綴，平衡鹹香油脂，吃來層次分明。
-						主廚陳俊嶽表示：「這是記憶中部落烤肉的味道，也是島嶼野性與細緻的交融。」
-						主要食材：台灣豬肉、馬告、鳳梨、洋蔥、香菜
-					</p>
-					<div class="price">NT$ <span>160</span></div>
-				</div>
-			</div>
-
-			<div class="dish-item right">
-				<div class="dish-img">
-					<img src="index-pic/fish-rice.jpg" alt="鹹魚炒飯" />
-				</div>
-				<div class="dish-info">
-					<h3><span class="underline">鹹香</span>嶼之鹹魚炒飯</h3>
-					<h4>台灣鹹魚佐季節時蔬</h4>
-					<p>
-						靈感來自東海岸阿嬤的便當，使用手工醃製鹹魚炒香，每口皆是回憶。搭配當季蔬菜拌炒，讓熟悉的炒飯升級為「家的味道」。
-						鹹魚不是配角，是料理的靈魂，這道菜，是島嶼的日常溫度。 ——主廚陳俊嶽
-						主要食材：台灣鹹魚、在地米、當季時蔬
-					</p>
-					<div class="price">NT$ <span>310</span></div>
-				</div>
-			</div>
-
-			<div class="dish-item left">
-				<div class="dish-img">
-					<img src="index-pic/tiramisu.jpg" alt="提拉米蘇" />
-				</div>
-				<div class="dish-info">
-					<h3><span class="underline">暖嶼</span>甜薯提拉米蘇</h3>
-					<h4>佐龍眼蜜與咖啡酒</h4>
-					<p>
-						以嘉義地瓜取代可可，層層堆疊馬斯卡彭與咖啡酒，綿密中帶地瓜香甜。最後淋上東勢龍眼蜜，溫潤尾韻如午後陽光。
-						主廚說：「甜點也能說台灣的故事，甜薯與龍眼，是我們的記憶密碼。」
-						主要食材：台灣地瓜、龍眼蜜、咖啡酒、馬斯卡彭乳酪
-					</p>
-					<div class="price">NT$ <span>160</span></div>
-				</div>
-			</div>
-			<img src="other-pic/pngwing.com.png" alt="裝飾圖" class="palm-top" />
-			<img src="other-pic/pngwing.com.png" alt="裝飾圖" class="palm-bottom" />
 		</section>
-
-		<section class="menu-section" id="select">
-			<h2><span class="underline">精選</span>菜單</h2>
-			<div class="menu-carousel">
-				<div class="menu-card" id="menu">
-					<div class="menu-pic">
-						<img src="index-pic/duck.jpg" alt="主餐" />
+		<section class="recommend" id="recommend">
+			<div class="palm-pic palm-top">
+				<img src="other-pic/pngwing.com.png" alt="裝飾圖" />
+			</div>
+			<h2><span class="underline">主廚</span>推薦</h2>
+			<div class="recommend-cards">
+				<div class="recommend-card">
+					<div class="recommend-card-img">
+						<img src="index-pic/skewers.jpg" alt="島嶼鹹香" />
 					</div>
-					<div class="menu-content">
-						<button class="nav-button left" onclick="prevMenu()">
-							<img src="index-pic/prev.png" alt="" />
-						</button>
-						<h3>暖嶼炭烤櫻桃鴨胸</h3>
-						<h4>暖嶼炭烤櫻桃鴨胸佐紅麴麥與金桔醬</h4>
-						<div class="price">NT$<span>310</span></div>
-						<button class="nav-button right" onclick="nextMenu()">
-							<img src="index-pic/next.png" alt="" />
-						</button>
+					<div class="recommend-card-txt">
+						<h3><span class="underline">島嶼</span>鹹香</h3>
+						<h4>馬告鹹豬肉串佐鳳梨莎莎</h4>
+						<p>
+							選自台灣山區的馬告（山胡椒），搭配醃漬豬肉以低溫炭烤，香氣隨煙升溫。酸甜的鳳梨莎莎與香菜點綴，平衡鹹香油脂，吃來層次分明。
+							主廚陳俊嶽表示：「這是記憶中部落烤肉的味道，也是島嶼野性與細緻的交融。」
+							主要食材：台灣豬肉、馬告、鳳梨、洋蔥、香菜
+						</p>
+						<div class="price">NT$ <span>160</span></div>
+					</div>
+				</div>
+				<div class="recommend-card">
+					<div class="recommend-card-img">
+						<img src="index-pic/fish-rice.jpg" alt="鹹魚炒飯" />
+					</div>
+					<div class="recommend-card-txt">
+						<h3><span class="underline">鹹香</span>嶼之鹹魚炒飯</h3>
+						<h4>台灣鹹魚佐季節時蔬</h4>
+						<p>
+							靈感來自東海岸阿嬤的便當，使用手工醃製鹹魚炒香，每口皆是回憶。搭配當季蔬菜拌炒，讓熟悉的炒飯升級為「家的味道」。
+							鹹魚不是配角，是料理的靈魂，這道菜，是島嶼的日常溫度。
+							——主廚陳俊嶽 主要食材：台灣鹹魚、在地米、當季時蔬
+						</p>
+						<div class="price">NT$ <span>310</span></div>
+					</div>
+				</div>
+				<div class="recommend-card">
+					<div class="recommend-card-img">
+						<img src="index-pic/tiramisu.jpg" alt="提拉米蘇" />
+					</div>
+					<div class="recommend-card-txt">
+						<h3><span class="underline">暖嶼</span>甜薯提拉米蘇</h3>
+						<h4>佐龍眼蜜與咖啡酒</h4>
+						<p>
+							以嘉義地瓜取代可可，層層堆疊馬斯卡彭與咖啡酒，綿密中帶地瓜香甜。最後淋上東勢龍眼蜜，溫潤尾韻如午後陽光。
+							主廚說：「甜點也能說台灣的故事，甜薯與龍眼，是我們的記憶密碼。」
+							主要食材：台灣地瓜、龍眼蜜、咖啡酒、馬斯卡彭乳酪
+						</p>
+						<div class="price">NT$ <span>160</span></div>
 					</div>
 				</div>
 			</div>
+
+			<div class="palm-pic palm-bottom">
+				<img src="other-pic/pngwing.com.png" alt="裝飾圖" />
+			</div>
+		</section>
+		<section class="selected" id="selected">
+			<div class="selected-background"></div>
+			<h2><span class="underline">精選</span>菜單</h2>
+			<div class="selected-card" id="selected-card">
+				<div class="selected-card-pic">
+					<img src="index-pic/duck.jpg" alt="主餐" />
+				</div>
+				<div class="selected-card-txt">
+					<h3>暖嶼炭烤櫻桃鴨胸</h3>
+					<h4>暖嶼炭烤櫻桃鴨胸佐紅麴麥與金桔醬</h4>
+					<div class="price">NT$<span>310</span></div>
+				</div>
+			</div>
+			<button class="selected-button left" onclick="prevMenu()">
+				<img src="index-pic/prev.png" alt="" />
+			</button>
+			<button class="selected-button right" onclick="nextMenu()">
+				<img src="index-pic/next.png" alt="" />
+			</button>
 		</section>
 		<section class="reservation">
-			<div class="reservation-content">
-				<div class="reservation-img">
-					<img src="index-pic/bgc.png" alt="線上訂位背景" />
-				</div>
-				<div class="reservation-txt">
-					<h2>準備來一趟暖嶼的溫暖饗宴了嗎？</h2>
-					<p>預留一席島嶼風味</p>
-					<a href="reservation.html" class="reservation-button">立即訂位</a>
-				</div>
+			<div class="reservation-pic">
+				<img src="index-pic/reservation-background.png" alt="線上訂位" />
+			</div>
+			<div class="reservation-txt">
+				<h2>準備來一趟暖嶼的溫暖饗宴了嗎？</h2>
+				<h3>預留一席島嶼風味</h3>
+				<a class="reservation-button" href="reservation.html">立即訂位</a>
 			</div>
 		</section>
-		<footer>
+		<footer class="footer">
+			<div class="footer-background">
+				<img src="other-pic/footer.png" alt="" />
+			</div>
 			<div class="footer-content">
-				<img src="other-pic/logo.png" alt="logo" />
+				<div class="footer-pic">
+					<img src="other-pic/logo.svg" alt="logo" />
+				</div>
 				<div class="footer-txt">
 					<p>營業時間:08:30-22:00</p>
 					<p>餐廳電話:(03)425-1108</p>
@@ -247,14 +285,15 @@
 				</div>
 				<div class="footer-icon">
 					<a href="https://www.instagram.com/"
-						><img src="other-pic/Vector.png" alt="Instagram"
+						><img src="other-pic/ig.png" alt="Instagram"
 					/></a>
 					<a href="https://www.facebook.com/?locale=zh_TW"
-						><img src="other-pic/Vector (1).png" alt="Facebook"
+						><img src="other-pic/fb.png" alt="Facebook"
 					/></a>
 				</div>
 			</div>
 		</footer>
 		<script src="index.js"></script>
+		<script src="sidebar.js"></script>
 	</body>
 </html>

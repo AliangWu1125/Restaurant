@@ -9,78 +9,191 @@ body {
 	padding-bottom: 0.1875rem;
 }
 
-.sidebar {
-	width: 12.5rem;
-	left: 3.125rem;
-	top: 3.75rem;
-	position: fixed;
+.header {
 	display: flex;
-	flex-direction: column;
-	z-index: 1;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 1ex;
+	background-color: #fff;
+	max-width: 1920px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	transition: top 0.5s ease;
 }
-
-.sidebar .logo {
-	margin-bottom: 2.625rem;
+.logo {
+	/* max-width: calc(213 / 1920 * 100vw); */
 }
-
-.sidebar a {
+.logo img {
+	/* width: 100%; */
+	/* height: auto; */
+}
+.menu {
+	display: flex;
+	border-radius: 0.3125rem;
+}
+.menu a {
+	font-family: Zen Maru Gothic;
 	display: block;
-	padding: 0.625rem 1rem;
-	text-decoration: none;
-	color: #000;
-	transition: background 0.2s;
-}
-
-.sidebar-menu a {
 	font-size: 1.5rem;
-	line-height: 2.625rem;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 0.3125rem;
+	width: 10vw;
+	height: auto;
+	padding: 1ex 1em;
+	box-sizing: border-box;
+	transition: background 0.2s;
+	white-space: nowrap;
 }
 
-.sidebar-submenu a {
-	font-size: 1.25rem;
-	line-height: 1.875rem;
-}
-
-.sidebar-menu a:hover {
+.menu a:hover {
 	color: #617f99;
 	background-color: #d6dfe6;
-	border-radius: 0.3125rem;
 }
 
-.sidebar-menu li:hover .sidebar-submenu {
+.submenu {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 0.3125rem;
+	z-index: 100;
+}
+.submenu a {
+	font-size: 1.25rem;
+}
+
+.menu li:hover .submenu {
 	display: block;
 }
-
-.sidebar-submenu {
+.submenu button {
 	display: none;
-	background-color: #fff;
-	padding: 0.5rem 0.5rem;
-	border-radius: 0.3125rem;
+}
+.hbmenu {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.logo img {
+		width: 100px;
+	}
+	.header {
+		position: fixed;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+	}
+	.menu {
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 75vw;
+		height: 100vh;
+		background-color: #fff;
+		transition: right 0.3s ease;
+		border-radius: 0;
+	}
+	.menu li {
+		position: relative;
+		top: 12vh;
+		margin-bottom: 5%;
+	}
+	.menu a {
+		font-size: 1.5rem;
+		width: 35%;
+		height: auto;
+	}
+	.menu.active {
+		right: 0;
+	}
+	.submenu {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 75vw;
+		height: 100vh;
+		transition: right 0.3s ease;
+		border-radius: 0;
+		background-color: #fff;
+	}
+	.submenu.active {
+		right: 0;
+	}
+	.submenu .back-btn {
+		font-family: Noto Sans TC;
+		font-size: 1.5rem;
+		display: block;
+		margin: 1em auto;
+		border: none;
+		padding: 1ex 1em;
+		color: inherit;
+		background: none;
+	}
+	.menu a:hover {
+		color: inherit;
+		background-color: transparent;
+	}
+	/* 漢堡選單 */
+	.hbmenu {
+		display: block;
+		height: 40px;
+		width: 40px;
+		margin-left: auto;
+		position: relative;
+	}
+	.hbmenu span {
+		height: 5px;
+		width: 100%;
+		background: #000;
+		border-radius: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.3s ease;
+	}
+	.hbmenu span:nth-child(1) {
+		top: 25%;
+	}
+	.hbmenu span:nth-child(3) {
+		top: 75%;
+	}
+	.hbmenu.active span:nth-child(1) {
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	.hbmenu.active span:nth-child(2) {
+		opacity: 0;
+	}
+	.hbmenu.active span:nth-child(3) {
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
 }
 
 /* 主要內容區域樣式 */
-.main-content {
+.resercation-content {
 	display: flex;
 	flex-direction: column;
-	padding: 5% 12%;
+	padding: 8% 12%;
 }
-
-.reservation-top {
-	border-bottom: 0.125rem solid #9f9f9f;
-	padding-bottom: 5rem;
-}
-
-.reservation-top img {
-	width: 100%;
-}
-
-.resercation-title {
+.resercation-content h2 {
+	font-family: Zen Maru Gothic;
+	text-align: center;
 	font-size: 2.6rem;
 	color: #cf9f94;
-	margin: 2% 0 3% 0;
+	border-bottom: 0.125rem solid #9f9f9f;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
-.section-subtitle {
+.resercation-content h3 {
+	font-family: Zen Maru Gothic;
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 	text-align: center;
@@ -93,18 +206,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 3%;
-	gap: 15%;
+	column-gap: 2rem;
 }
 
 #reservationForm {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
 }
-
-.form-group {
-	text-align: start;
-	margin: 5%;
-}
-
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group input[type="date"],
@@ -122,14 +231,9 @@ body {
 	display: flex;
 	gap: 1rem;
 }
-
-/* 若日後需要用到時間與日期欄位並列的樣式可啟用此段
-.form-group.date-time .date-group,
-.form-group.date-time .time-group {
-	flex: 1;
+.form-group textarea {
+	resize: none;
 }
-*/
-
 .submit-button {
 	padding: 1rem 1rem;
 	background: #fff;
@@ -145,43 +249,116 @@ body {
 	border: none;
 }
 
-.reservation-image img {
-	width: 100%;
+.reservation-pic {
+	width: 40.2vw;
+	overflow: hidden;
 }
-.palm {
-	width: 18%;
+.reservation-pic img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+.palm-pic {
+	width: 18vw;
 	position: absolute;
-	transform: scaleX(-1);
 	right: 0;
-	top: 55%;
+	top: 15%;
+	transform: scaleX(-1);
+	z-index: -1;
+}
+.palm-pic img {
+	width: 100%;
+	height: auto;
+}
+/* -----------------------------footer */
+.footer {
+	position: relative;
+	padding-bottom: 10%;
+}
+.footer-background {
+	max-width: 100vw;
+	position: absolute;
+	bottom: 0;
+}
+.footer-background img {
+	width: 100%;
+	height: auto;
 }
 .footer-content {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(1fr);
 	justify-content: center;
-	align-items: center;
-	padding: 3% 0;
-	gap: 15%;
+	row-gap: 2.5rem;
 }
-
 .footer-txt {
-	position: relative;
 	color: #617f99;
+	text-align: start;
 }
 
-.footer-txt::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -20%;
-	width: 0.0625rem;
-	height: 100%;
-	background-color: #000;
-}
 .footer-txt p {
 	font-size: 1.5rem;
 	line-height: 2.625rem;
 }
 .footer-icon {
 	display: flex;
-	gap: 80%;
+	column-gap: 2.5rem;
+}
+@media (max-width: 768px) {
+	.resercation-content {
+		padding: 6rem 1rem 1rem;
+		row-gap: 1.5rem;
+	}
+	.resercation-title {
+		font-size: 2.5rem;
+		margin-bottom: 0;
+	}
+	.section-subtitle {
+		font-size: 2rem;
+	}
+
+	.reservation-section {
+		flex-direction: column-reverse;
+		column-gap: 0;
+		row-gap: 2rem;
+	}
+	.reservation-pic {
+		width: 80vw;
+	}
+	.palm-pic {
+		width: 25vw;
+	}
+	.footer {
+		padding: 2rem 0;
+	}
+	.footer-content {
+		row-gap: 1.5rem;
+	}
+	.footer-pic {
+		width: 40vw;
+	}
+	.footer-pic img {
+		width: 100%;
+		height: auto;
+	}
+	.footer-txt p {
+		font-size: 1rem;
+		line-height: 2rem;
+	}
+	.footer-icon {
+		column-gap: 0.5rem;
+	}
+	.footer-icon img {
+		width: 8vw;
+	}
+}
+@media (max-width: 768px), (hover: none) {
+	.menu a:hover {
+		color: inherit;
+		background-color: transparent;
+	}
+	.submit-button:hover {
+		background-color: inherit;
+		color: inherit;
+		border: 0.0625rem solid #ccc;
+	}
 }

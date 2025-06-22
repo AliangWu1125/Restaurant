@@ -1,17 +1,29 @@
+//-----------------------------banner輪播圖
+
 const sliderImage = document.getElementById("slider-image");
 const sliderBtns = document.querySelectorAll(".slider-btn");
+const title1 = document.getElementById("slider-title1");
+const title2 = document.getElementById("slider-title2");
 
 const images = [
-	"index-pic/view01.jpg",
-	"index-pic/view02.jpg",
-	"index-pic/view04.jpg",
-	"index-pic/view05.jpg",
+	"index-pic/view01.png",
+	"index-pic/view02.png",
+	"index-pic/view03.png",
+	"index-pic/view04.png",
+];
+const titles = [
+	{ title1: "在地風土", title2: "款心款待" },
+	{ title1: "季節食材", title2: "暖嶼風味" },
+	{ title1: "主廚精選", title2: "職人手藝" },
+	{ title1: "餐酒搭配", title2: "慢享時光" },
 ];
 
 let index = 0;
 
 function updateSlider() {
 	sliderImage.src = images[index];
+	title1.textContent = titles[index].title1;
+	title2.textContent = titles[index].title2;
 	sliderBtns.forEach((btn) => btn.classList.remove("active"));
 	sliderBtns[index].classList.add("active");
 }
@@ -27,52 +39,8 @@ sliderBtns.forEach((btn) => {
 		updateSlider();
 	});
 });
-
 updateSlider();
-
-const carouselContainer2 = document.querySelector(".carousel-container2");
-const carouselTrack2 = document.querySelector(".carousel-track2");
-const slideContainers2 = document.querySelectorAll(".slide-container2");
-const images2 = document.querySelectorAll(".carousel-track2 img");
-let currentPosition2 = 0;
-const scrollSpeed2 = 0.8; // 調整滾動速度 (數值越小越慢)
-let animationFrameId2;
-let slideWidth2;
-let trackWidth2;
-
-function animateCarousel2() {
-	currentPosition2 -= scrollSpeed2;
-
-	if (Math.abs(currentPosition2) > trackWidth2) {
-		currentPosition2 = 0;
-	}
-
-	carouselTrack2.style.transform = `translateX(${currentPosition2}px)`;
-	animationFrameId2 = requestAnimationFrame(animateCarousel2);
-}
-
-function initializeCarousel2() {
-	if (images2.length > 0) {
-		// 計算每個滑塊容器的寬度（圖片寬度 + 間隔）
-		slideWidth2 = slideContainers2[0].offsetWidth;
-		trackWidth2 = slideWidth2 * slideContainers2.length;
-		carouselTrack2.style.width = `${trackWidth2}px`;
-		animateCarousel2();
-	}
-}
-
-// 確保在視窗載入完成後初始化輪播 (包括圖片載入)
-window.onload = initializeCarousel2;
-
-// 滑鼠懸停時停止動畫
-carouselContainer2.addEventListener("mouseenter", () => {
-	cancelAnimationFrame(animationFrameId2);
-});
-
-// 滑鼠移開時恢復動畫
-carouselContainer2.addEventListener("mouseleave", () => {
-	animationFrameId2 = requestAnimationFrame(animateCarousel2);
-});
+//----------------------------------精選菜單
 const menuItems = [
 	{
 		img: "index-pic/duck.jpg",
@@ -95,24 +63,21 @@ const menuItems = [
 ];
 
 let menuIndex = 0;
-const menu = document.getElementById("menu");
-
+const selected = document.getElementById("selected-card");
 function updateMenu() {
 	const content = menuItems[menuIndex];
-	menu.innerHTML = `<div class="menu-pic">
-						<img src="${content.img}" alt="主餐" />
-					</div>
-<div class="menu-content">
-<h3>${content.title}</h3>
-<h4>${content.desc}</h4>
-<div class="price">NT$ <span>${content.price}</span></div>
-<button class="nav-button left" onclick="prevMenu()">
-							<img src="index-pic/prev.png" alt="" />
-						</button>
-						<button class="nav-button right" onclick="nextMenu()">
-							<img src="index-pic/next.png" alt="" />
-						</button>
-</div>`;
+	selected.classList.remove("animate");
+	void selected.offsetWidth;
+	selected.innerHTML = `
+		<div class="selected-card-pic">
+			<img src="${content.img}" alt="主餐" />
+		</div>
+		<div class="selected-card-txt">
+			<h3>${content.title}</h3>
+			<h4>${content.desc}</h4>
+			<div class="price">NT$ <span>${content.price}</span></div>
+		</div>`;
+	selected.classList.add("animate");
 }
 
 function nextMenu() {

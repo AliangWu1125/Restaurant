@@ -4,137 +4,199 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>暖嶼完整菜單</title>
+		<link rel="icon" href="other-pic/logoicon.png" type="image/png" />
 		<link rel="stylesheet" href="react.css" />
 		<link rel="stylesheet" href="menu.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<aside class="sidebar">
-			<nav>
+		<header>
+			<nav class="header">
 				<div class="logo">
-					<a href="index.html">
-						<img src="other-pic/logo.png" alt="logo" />
-					</a>
+					<a href="index.html"><img src="other-pic/logo.svg" alt="index" /></a>
 				</div>
-				<ul class="sidebar-menu">
+				<ul id="menu" class="menu">
 					<li>
-						<a href="#">關於暖嶼</a>
-						<ul class="sidebar-submenu">
-							<li><a href="home.html#about">概念</a></li>
-							<li><a href="home.html#space">空間</a></li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu1"
+							>關於暖嶼</a
+						>
+						<ul id="aboutsubmenu1" class="submenu">
+							<li><a href="about.html#about">概念</a></li>
+							<li><a href="about.html#space">空間</a></li>
 							<li><a href="team.html">團隊</a></li>
+							<li><button class="back-btn">返回</button></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#">當季風味</a>
-						<ul class="sidebar-submenu">
-							<li><a href="ingredient.html">食材故事</a></li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu2"
+							>當季風味</a
+						>
+						<ul id="aboutsubmenu2" class="submenu">
+							<li><a href="ingredient.html">產地故事</a></li>
+							<li><button class="back-btn">返回</button></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#">菜單</a>
-						<ul class="sidebar-submenu">
-							<li><a href="home.html#recommend">主廚推薦</a></li>
-							<li><a href="home.htm#lselect">當季精選</a></li>
+						<a href="#" class="open-submenu" data-target="aboutsubmenu3"
+							>菜單</a
+						>
+						<ul id="aboutsubmenu3" class="submenu">
+							<li><a href="index.html#recommend">主廚推薦</a></li>
+							<li><a href="index.html#selected">當季精選</a></li>
 							<li><a href="menu.html">完整菜單</a></li>
+							<li><button class="back-btn">返回</button></li>
 						</ul>
 					</li>
 					<li><a href="reservation.html">線上訂位</a></li>
 					<li><a href="contactus.html">聯絡我們</a></li>
 				</ul>
+				<div class="hbmenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</nav>
-		</aside>
+		</header>
 		<section>
 			<div class="menu-section">
 				<div class="menu-title">
 					<h2><span class="underline">完整</span>菜單</h2>
 				</div>
 				<div class="menu-content">
-					<div class="menu-txt">
-						<h3>小點</h3>
-						<h4>暖嶼酥炸海味</h4>
-						<p>(東港櫻花蝦,馬鈴薯,蒜頭,美乃滋)</p>
-						<div class="price">NT$ <span>160</span></div>
-						<h4>島嶼鹹香</h4>
-						<p>(台灣豬肉,馬告,鳳梨,洋蔥,香菜)</p>
-						<div class="price">NT$ <span>160</span></div>
-						<h4>沃土時蔬盤</h4>
-						<p>(當季台灣蔬菜,客家桔醬)</p>
-						<div class="price">NT$ <span>160</span></div>
-						<h4>嶼之煙燻小卷</h4>
-						<p>(澎湖小卷,XO醬)</p>
-						<div class="price">NT$ <span>160</span></div>
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>小點</h3>
+							<h4>暖嶼酥炸海味</h4>
+							<p>(東港櫻花蝦,馬鈴薯,蒜頭,美乃滋)</p>
+							<div class="price">NT$ <span>160</span></div>
+							<h4>島嶼鹹香</h4>
+							<p>(台灣豬肉,馬告,鳳梨,洋蔥,香菜)</p>
+							<div class="price">NT$ <span>160</span></div>
+							<h4>沃土時蔬盤</h4>
+							<p>(當季台灣蔬菜,客家桔醬)</p>
+							<div class="price">NT$ <span>160</span></div>
+							<h4>嶼之煙燻小卷</h4>
+							<p>(澎湖小卷,XO醬)</p>
+							<div class="price">NT$ <span>160</span></div>
+						</div>
+						<div class="menu-pic">
+							<img src="index-pic/skewers.jpg" alt="" />
+						</div>
 					</div>
-					<div class="menu-txt">
-						<h3>主食</h3>
-						<h4>暖嶼海鮮義大利麵</h4>
-						<p>(台灣當季海鮮,九層塔)</p>
-						<p></p>
-						<div class="price">NT$ <span>280</span></div>
-						<h4>島嶼肉燥飯</h4>
-						<p>(台灣豬肉,米,溫泉蛋)</p>
-						<div class="price">NT$ <span>250</span></div>
-						<h4>沃土菇菇燉飯</h4>
-						<p>(台灣當季菇類,燉飯,刺蔥)</p>
-						<div class="price">NT$ <span>230</span></div>
-						<h4>嶼之鹹魚炒飯</h4>
-						<p>(台灣鹹魚,米,當季台灣蔬菜)</p>
-						<div class="price">NT$ <span>310</span></div>
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>主食</h3>
+							<h4>暖嶼海鮮義大利麵</h4>
+							<p>(台灣當季海鮮,九層塔)</p>
+							<p></p>
+							<div class="price">NT$ <span>280</span></div>
+							<h4>島嶼肉燥飯</h4>
+							<p>(台灣豬肉,米,溫泉蛋)</p>
+							<div class="price">NT$ <span>250</span></div>
+							<h4>沃土菇菇燉飯</h4>
+							<p>(台灣當季菇類,燉飯,刺蔥)</p>
+							<div class="price">NT$ <span>230</span></div>
+							<h4>嶼之鹹魚炒飯</h4>
+							<p>(台灣鹹魚,米,當季台灣蔬菜)</p>
+							<div class="price">NT$ <span>310</span></div>
+							<div class="menu-pic">
+								<img src="index-pic/fish-rice.jpg" alt="" />
+							</div>
+						</div>
 					</div>
-					<div class="menu-txt">
-						<h3>排餐</h3>
-						<h4>暖嶼炭烤櫻桃鴨胸</h4>
-						<p>(台灣櫻桃鴨 ,紅藜麥 ,金桔)</p>
-						<div class="price">NT$ <span>650</span></div>
-						<h4>島嶼爐烤石斑魚</h4>
-						<p>(台灣龍膽石斑,海鹽,檸檬)</p>
-						<div class="price">NT$ <span>560</span></div>
-						<h4>沃土慢燉豬頰肉</h4>
-						<p>(台灣豬,黑豆醬油麴,當季台灣蔬菜)</p>
-						<div class="price">NT$ <span>500</span></div>
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>排餐</h3>
+							<h4>暖嶼炭烤櫻桃鴨胸</h4>
+							<p>(台灣櫻桃鴨 ,紅藜麥 ,金桔)</p>
+							<div class="price">NT$ <span>650</span></div>
+							<h4>島嶼爐烤石斑魚</h4>
+							<p>(台灣龍膽石斑,海鹽,檸檬)</p>
+							<div class="price">NT$ <span>560</span></div>
+							<h4>沃土慢燉豬頰肉</h4>
+							<p>(台灣豬,黑豆醬油麴,當季台灣蔬菜)</p>
+							<div class="price">NT$ <span>500</span></div>
+							<div class="menu-pic">
+								<img src="index-pic/duck.jpg" alt="" />
+							</div>
+						</div>
 					</div>
-					<div class="menu-txt">
-						<h3>甜點</h3>
-						<h4>暖嶼甜薯提拉米蘇</h4>
-						<p>(台灣地瓜,龍眼蜜 ,咖啡酒,馬斯卡彭)</p>
-						<div class="price">NT$ <span>160</span></div>
-						<h4>島嶼鳳梨冰淇淋</h4>
-						<p>(台灣鳳梨, 鮮奶油, 焦糖, 海鹽)</p>
-						<div class="price">NT$ <span>130</span></div>
-						<h4>沃土茶香戚風蛋糕</h4>
-						<p>(台灣焙茶,麵粉,鮮奶油)</p>
-						<div class="price">NT$ <span>100</span></div>
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>甜點</h3>
+							<h4>暖嶼甜薯提拉米蘇</h4>
+							<p>(台灣地瓜,龍眼蜜 ,咖啡酒,馬斯卡彭)</p>
+							<div class="price">NT$ <span>160</span></div>
+							<h4>島嶼鳳梨冰淇淋</h4>
+							<p>(台灣鳳梨, 鮮奶油, 焦糖, 海鹽)</p>
+							<div class="price">NT$ <span>130</span></div>
+							<h4>沃土茶香戚風蛋糕</h4>
+							<p>(台灣焙茶,麵粉,鮮奶油)</p>
+							<div class="price">NT$ <span>100</span></div>
+							<div class="menu-pic">
+								<img src="index-pic/ice cream.jpg" alt="" />
+							</div>
+						</div>
 					</div>
-					<div class="menu-txt">
-						<h3>酒類</h3>
-						<h4>暖嶼之光</h4>
-						<p>(台灣金桔,琴酒,蘇打水,迷迭香)</p>
-						<div class="price">NT$ <span>300</span></div>
-						<h4>島嶼微風</h4>
-						<p>(台灣鳳梨,蘭姆酒,薄荷,檸檬)</p>
-						<div class="price">NT$ <span>280</span></div>
-						<h4>沃土甘露</h4>
-						<p>(台灣洛神花,伏特加,氣泡水,糖)</p>
-						<div class="price">NT$ <span>310</span></div>
-						<h4>台灣在地精釀啤酒</h4>
-						<div class="price">NT$ <span>160</span></div>
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>酒類</h3>
+							<h4>暖嶼之光</h4>
+							<p>(台灣金桔,琴酒,蘇打水,迷迭香)</p>
+							<div class="price">NT$ <span>300</span></div>
+							<h4>島嶼微風</h4>
+							<p>(台灣鳳梨,蘭姆酒,薄荷,檸檬)</p>
+							<div class="price">NT$ <span>280</span></div>
+							<h4>沃土甘露</h4>
+							<p>(台灣洛神花,伏特加,氣泡水,糖)</p>
+							<div class="price">NT$ <span>310</span></div>
+							<h4>台灣在地精釀啤酒</h4>
+							<div class="price">NT$ <span>160</span></div>
+							<div class="menu-pic">
+								<img src="index-pic/reservation-background.png" alt="" />
+							</div>
+						</div>
 					</div>
-					<div class="menu-txt">
-						<h3>無酒精飲品</h3>
-						<h4>氣泡飲料</h4>
-						<div class="price">NT$ <span>90</span></div>
-						<h4>當季果汁</h4>
-						<div class="price">NT$ <span>80</span></div>
-						<h4>茶類</h4>
-						<div class="price">NT$ <span>90</span></div>
-						<h4>手沖咖啡</h4>
-						<div class="price">NT$ <span>90</span></div>
+
+					<div class="menu-card">
+						<div class="menu-txt">
+							<h3>無酒精飲品</h3>
+							<h4>氣泡飲料</h4>
+							<div class="price">NT$ <span>90</span></div>
+							<h4>當季果汁</h4>
+							<div class="price">NT$ <span>80</span></div>
+							<h4>茶類</h4>
+							<div class="price">NT$ <span>90</span></div>
+							<h4>手沖咖啡</h4>
+							<div class="price">NT$ <span>90</span></div>
+							<div class="menu-pic">
+								<img src="index-pic/coffe.jpg" alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="palm-pic">
+				<img src="other-pic/pngwing.com.png" alt="裝飾圖" />
+			</div>
 		</section>
-		<footer>
+		<footer class="footer">
+			<div class="footer-background">
+				<img src="other-pic/footer.png" alt="" />
+			</div>
 			<div class="footer-content">
-				<img src="other-pic/logo.png" alt="logo" />
+				<div class="footer-pic">
+					<img src="other-pic/logo.svg" alt="logo" />
+				</div>
 				<div class="footer-txt">
 					<p>營業時間:08:30-22:00</p>
 					<p>餐廳電話:(03)425-1108</p>
@@ -142,14 +204,14 @@
 				</div>
 				<div class="footer-icon">
 					<a href="https://www.instagram.com/"
-						><img src="other-pic/Vector.png" alt="Instagram"
+						><img src="other-pic/ig.png" alt="Instagram"
 					/></a>
 					<a href="https://www.facebook.com/?locale=zh_TW"
-						><img src="other-pic/Vector (1).png" alt="Facebook"
+						><img src="other-pic/fb.png" alt="Facebook"
 					/></a>
 				</div>
 			</div>
 		</footer>
-		<img src="other-pic/pngwing.com.png" alt="裝飾圖" class="palm" />
+		<script src="sidebar.js"></script>
 	</body>
 </html>

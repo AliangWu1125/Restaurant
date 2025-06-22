@@ -1,11 +1,11 @@
-const images = document.querySelectorAll(".image-grid img");
+const buttons = document.querySelectorAll(".ingredient-card button");
 const infoBox = document.getElementById("info-box");
 const infoImage = document.getElementById("info-image");
 const infoTitle = document.getElementById("info-title");
 const infoSubtitle = document.getElementById("info-subtitle");
 const infoDescription = document.getElementById("info-description");
 const closeBtn = document.getElementById("close-btn");
-
+const overlay = document.getElementById("overlay");
 const infoData = [
 	{
 		img: "ingredient-pic/pic (1).png",
@@ -50,24 +50,11 @@ const infoData = [
 			"介紹:日照充足、酸甜濃郁,是台灣番茄的經典代表。可用於開胃菜、冷湯或風乾製成番茄乾,保留其濃縮果香。含豐富茄紅素,是視覺與營養兼具的亮點食材。",
 	},
 ];
+buttons.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.stopPropagation(); // 避免點擊事件冒泡
 
-images.forEach((img) => {
-	img.addEventListener("click", () => {
-		const index = parseInt(img.dataset.index);
-		const data = infoData[index];
-
-		infoImage.src = data.img;
-		infoTitle.textContent = data.title;
-		infoSubtitle.textContent = data.subtitle;
-		infoDescription.textContent = data.description;
-		infoBox.style.display = "block";
-	});
-});
-const overlay = document.getElementById("overlay");
-
-images.forEach((img) => {
-	img.addEventListener("click", () => {
-		const index = parseInt(img.dataset.index);
+		const index = parseInt(btn.dataset.index);
 		const data = infoData[index];
 
 		infoImage.src = data.img;
@@ -76,30 +63,23 @@ images.forEach((img) => {
 		infoDescription.textContent = data.description;
 
 		infoBox.style.display = "block";
-		overlay.style.display = "block"; // 顯示模糊背景
+		overlay.style.display = "block";
 	});
-});
-
-document.addEventListener("click", (e) => {
-	if (!infoBox.contains(e.target) && !e.target.matches(".image-grid img")) {
-		infoBox.style.display = "none";
-		overlay.style.display = "none"; // 隱藏模糊背景
-	}
-});
-
-closeBtn.addEventListener("click", () => {
-	infoBox.style.display = "none";
-	overlay.style.display = "none"; // 隱藏模糊背景
-});
-
-// 點擊外部區域關閉
-document.addEventListener("click", (e) => {
-	if (!infoBox.contains(e.target) && !e.target.matches(".image-grid img")) {
-		infoBox.style.display = "none";
-	}
 });
 
 // 點擊關閉按鈕
 closeBtn.addEventListener("click", () => {
 	infoBox.style.display = "none";
+	overlay.style.display = "none";
+});
+
+// 點擊空白區域關閉
+document.addEventListener("click", (e) => {
+	if (
+		!infoBox.contains(e.target) &&
+		!e.target.matches(".ingredient-card button")
+	) {
+		infoBox.style.display = "none";
+		overlay.style.display = "none";
+	}
 });
