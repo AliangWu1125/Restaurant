@@ -12,6 +12,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em 1ex;
+	box-sizing: border-box;
 	background-color: #fff;
 	max-width: 1920px;
 	position: fixed;
@@ -22,15 +23,17 @@ body {
 	transition: top 0.5s ease;
 }
 .logo {
-	/* max-width: calc(213 / 1920 * 100vw); */
+	flex-basis: 15%;
 }
 .logo img {
-	/* width: 100%; */
-	/* height: auto; */
+	width: 100%;
+	height: auto;
 }
 .menu {
 	display: flex;
-	border-radius: 0.3125rem;
+}
+.menu li {
+	flex-basis: 20%;
 }
 .menu a {
 	font-family: Zen Maru Gothic;
@@ -40,12 +43,9 @@ body {
 	text-decoration: none;
 	text-align: center;
 	border-radius: 0.3125rem;
-	width: 10vw;
-	height: auto;
-	padding: 1ex 1em;
-	box-sizing: border-box;
 	transition: background 0.2s;
-	white-space: nowrap;
+	padding: 1rem 0.5rem;
+	box-sizing: border-box;
 }
 .menu a:hover {
 	color: #617f99;
@@ -55,13 +55,9 @@ body {
 	display: none;
 	position: absolute;
 	background-color: #fff;
-	border-radius: 0.3125rem;
 	z-index: 100;
+	border-radius: 0.3125rem;
 }
-.submenu a {
-	font-size: 1.25rem;
-}
-
 .menu li:hover .submenu {
 	display: block;
 }
@@ -73,6 +69,7 @@ body {
 }
 /* ---------------------------------banner */
 .banner {
+	padding-top: 7%;
 	margin-bottom: 6.25%;
 }
 .sliders {
@@ -109,7 +106,6 @@ body {
 .slider-buttons {
 	position: absolute;
 	left: 50%;
-	/* bottom: 0; */
 }
 .slider-btn {
 	width: 0.625rem;
@@ -517,15 +513,17 @@ body {
 	max-width: 1920px;
 	position: absolute;
 	bottom: 0;
+	z-index: -1;
 }
 .footer-background img {
 	width: 100%;
 	height: auto;
 }
 .footer-content {
-	display: grid;
-	grid-template-columns: repeat(1fr);
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	row-gap: 2.5rem;
 }
 .footer-txt p {
@@ -550,6 +548,8 @@ body {
 	}
 	.menu {
 		flex-direction: column;
+		/* flex-wrap: wrap; */
+		text-align: start;
 		position: fixed;
 		top: 0;
 		right: -100%;
@@ -563,11 +563,13 @@ body {
 	.menu li {
 		position: relative;
 		top: 12vh;
+		flex-basis: 0;
 		margin-bottom: 5%;
+		width: 35vw;
 	}
 	.menu a {
 		font-size: 1.5rem;
-		width: 35%;
+		width: 100%;
 		height: auto;
 	}
 	.menu.active {
@@ -689,7 +691,7 @@ body {
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
-		scrollbar-width: none; /*Firefox 隱藏卷軸 */
+		scrollbar-width: none;
 	}
 
 	.about-images > div {
@@ -698,7 +700,7 @@ body {
 		overflow: hidden;
 	}
 	.about-images::-webkit-scrollbar {
-		display: none; /* Chrome, Safari 隱藏卷軸 */
+		display: none;
 	}
 	.about-images img {
 		width: 100%;
@@ -888,7 +890,7 @@ body {
 		padding: 2rem 0;
 	}
 	.footer-content {
-		row-gap: 1.5rem;
+		row-gap: 0em;
 	}
 	.footer-pic {
 		width: 40vw;
