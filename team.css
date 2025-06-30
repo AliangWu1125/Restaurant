@@ -1,12 +1,12 @@
 body {
 	font-family: Noto Sans TC;
 	background-color: #eaeae4;
-	letter-spacing: 0.125rem; /* 2px */
+	letter-spacing: 0.125rem; 
 }
 
 .underline {
-	border-bottom: 0.125rem solid #9f9f9f; /* 2px */
-	padding-bottom: 0.1875rem; /* 3px */
+	border-bottom: 0.125rem solid #9f9f9f; 
+	padding-bottom: 0.1875rem; 
 }
 
 .header {
@@ -49,9 +49,14 @@ body {
 	padding: 1rem 0.5rem;
 	box-sizing: border-box;
 }
+.reservation-li a {
+	color: #617f99;
+
+	background-color: #d6dfe6;
+	border-radius: 0.3125rem;
+}
 .menu a:hover {
 	color: #617f99;
-	background-color: #d6dfe6;
 }
 .submenu {
 	display: none;
@@ -66,7 +71,7 @@ body {
 .submenu button {
 	display: none;
 }
-.hbmenu {
+.mobile {
 	display: none;
 }
 
@@ -82,12 +87,11 @@ body {
 	}
 	.menu {
 		flex-direction: column;
-		/* flex-wrap: wrap; */
 		text-align: start;
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		background-color: #fff;
 		transition: right 0.3s ease;
@@ -96,8 +100,8 @@ body {
 	}
 	.menu li {
 		position: relative;
-		top: 12vh;
 		flex-basis: 0;
+		top: 12vh;
 		margin-bottom: 5%;
 		width: 35vw;
 	}
@@ -114,7 +118,7 @@ body {
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		transition: right 0.3s ease;
 		border-radius: 0;
@@ -133,11 +137,29 @@ body {
 		color: inherit;
 		background: none;
 	}
+	.reservation-li {
+		display: none;
+	}
 	.menu a:hover {
 		color: inherit;
 		background-color: transparent;
 	}
+	.mobile {
+		display: block;
+	}
+	.reserve-icon {
+		z-index: 10;
+		width: 40px;
+		z-index: 10;
+		position: fixed;
+		right: 15%;
+	}
+	.reserve-icon img {
+		width: 100%;
+		height: auto;
+	}
 	/* -------------------------------------hbmenu */
+
 	.hbmenu {
 		display: block;
 		height: 40px;
@@ -288,6 +310,12 @@ body {
 	display: flex;
 	column-gap: 2.5rem;
 }
+.footer-copyright {
+	color: #757575;
+	position: absolute;
+	bottom: 2%;
+	text-align: center;
+}
 @media (max-width: 768px) {
 	.team-content {
 		padding: 6rem 1rem 1rem;
@@ -348,6 +376,7 @@ body {
 	}
 	.footer-icon {
 		column-gap: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 	.footer-icon img {
 		width: 8vw;

@@ -68,13 +68,22 @@
 							<li><button class="back-btn">返回</button></li>
 						</ul>
 					</li>
-					<li><a href="reservation.html">線上預約</a></li>
 					<li><a href="contactus.html">聯絡暖嶼</a></li>
+					<li class="reservation-li">
+						<a href="reservation.html">線上預約</a>
+					</li>
 				</ul>
-				<div class="hbmenu">
-					<span></span>
-					<span></span>
-					<span></span>
+				<div class="mobile">
+					<div class="reserve-icon">
+						<a href="reservation.html"
+							><img src="other-pic/reserve-icon.svg" alt=""
+						/></a>
+					</div>
+					<div class="hbmenu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -85,113 +94,236 @@
 				</div>
 				<div class="menu-content">
 					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>小點</h3>
-							<h4>暖嶼酥炸海味</h4>
-							<p>(東港櫻花蝦,馬鈴薯,蒜頭,美乃滋)</p>
-							<div class="price">NT$ <span>160</span></div>
-							<h4>島嶼鹹香</h4>
-							<p>(台灣豬肉,馬告,鳳梨,洋蔥,香菜)</p>
-							<div class="price">NT$ <span>160</span></div>
-							<h4>沃土時蔬盤</h4>
-							<p>(當季台灣蔬菜,客家桔醬)</p>
-							<div class="price">NT$ <span>160</span></div>
-							<h4>嶼之煙燻小卷</h4>
-							<p>(澎湖小卷,XO醬)</p>
-							<div class="price">NT$ <span>160</span></div>
-						</div>
-						<div class="menu-pic">
-							<img src="index-pic/skewers.jpg" alt="" />
-						</div>
-					</div>
-					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>主食</h3>
-							<h4>暖嶼海鮮義大利麵</h4>
-							<p>(台灣當季海鮮,九層塔)</p>
-							<p></p>
-							<div class="price">NT$ <span>280</span></div>
-							<h4>島嶼肉燥飯</h4>
-							<p>(台灣豬肉,米,溫泉蛋)</p>
-							<div class="price">NT$ <span>250</span></div>
-							<h4>沃土菇菇燉飯</h4>
-							<p>(台灣當季菇類,燉飯,刺蔥)</p>
-							<div class="price">NT$ <span>230</span></div>
-							<h4>嶼之鹹魚炒飯</h4>
-							<p>(台灣鹹魚,米,當季台灣蔬菜)</p>
-							<div class="price">NT$ <span>310</span></div>
+						<h3>小點</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>暖嶼酥炸海味</h4>
+								<p>(東港櫻花蝦,馬鈴薯,蒜頭,美乃滋)</p>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
 							<div class="menu-pic">
-								<img src="index-pic/fish-rice.jpg" alt="" />
+								<img src="menu-pic/fries.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>島嶼鹹香</h4>
+								<p>(台灣豬肉,馬告,鳳梨,洋蔥,香菜)</p>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/skewers.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>沃土時蔬盤</h4>
+								<p>(當季台灣蔬菜,客家桔醬)</p>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/vegetable.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>嶼之煙燻小卷</h4>
+								<p>(澎湖小卷,XO醬)</p>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/seafood.png" alt="" />
 							</div>
 						</div>
 					</div>
 					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>排餐</h3>
-							<h4>暖嶼炭烤櫻桃鴨胸</h4>
-							<p>(台灣櫻桃鴨 ,紅藜麥 ,金桔)</p>
-							<div class="price">NT$ <span>650</span></div>
-							<h4>島嶼爐烤石斑魚</h4>
-							<p>(台灣龍膽石斑,海鹽,檸檬)</p>
-							<div class="price">NT$ <span>560</span></div>
-							<h4>沃土慢燉豬頰肉</h4>
-							<p>(台灣豬,黑豆醬油麴,當季台灣蔬菜)</p>
-							<div class="price">NT$ <span>500</span></div>
+						<h3>主食</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>暖嶼海鮮義大利麵</h4>
+								<p>(台灣當季海鮮,九層塔)</p>
+								<div class="price">NT$ <span>280</span></div>
+							</div>
 							<div class="menu-pic">
-								<img src="index-pic/duck.jpg" alt="" />
+								<img src="menu-pic/seapasta.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>島嶼肉燥飯</h4>
+								<p>(台灣豬肉,米,溫泉蛋)</p>
+								<div class="price">NT$ <span>250</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/pork-rice.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>沃土菇菇燉飯</h4>
+								<p>(台灣當季菇類,燉飯,刺蔥)</p>
+								<div class="price">NT$ <span>230</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/risotto.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>嶼之鹹魚炒飯</h4>
+								<p>(台灣鹹魚,米,當季台灣蔬菜)</p>
+								<div class="price">NT$ <span>310</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/fish-rice.png" alt="" />
 							</div>
 						</div>
 					</div>
 					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>甜點</h3>
-							<h4>暖嶼甜薯提拉米蘇</h4>
-							<p>(台灣地瓜,龍眼蜜 ,咖啡酒,馬斯卡彭)</p>
-							<div class="price">NT$ <span>160</span></div>
-							<h4>島嶼鳳梨冰淇淋</h4>
-							<p>(台灣鳳梨, 鮮奶油, 焦糖, 海鹽)</p>
-							<div class="price">NT$ <span>130</span></div>
-							<h4>沃土茶香戚風蛋糕</h4>
-							<p>(台灣焙茶,麵粉,鮮奶油)</p>
-							<div class="price">NT$ <span>100</span></div>
+						<h3>排餐</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>暖嶼炭烤櫻桃鴨胸</h4>
+								<p>(台灣櫻桃鴨 ,紅藜麥 ,金桔)</p>
+								<div class="price">NT$ <span>650</span></div>
+							</div>
 							<div class="menu-pic">
-								<img src="index-pic/ice cream.jpg" alt="" />
+								<img src="menu-pic/duck.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>島嶼爐烤石斑魚</h4>
+								<p>(台灣龍膽石斑,海鹽,檸檬)</p>
+								<div class="price">NT$ <span>560</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/fish.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>沃土慢燉豬頰肉</h4>
+								<p>(台灣豬,黑豆醬油麴,當季台灣蔬菜)</p>
+								<div class="price">NT$ <span>500</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/pork.png" alt="" />
 							</div>
 						</div>
 					</div>
 					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>酒類</h3>
-							<h4>暖嶼之光</h4>
-							<p>(台灣金桔,琴酒,蘇打水,迷迭香)</p>
-							<div class="price">NT$ <span>300</span></div>
-							<h4>島嶼微風</h4>
-							<p>(台灣鳳梨,蘭姆酒,薄荷,檸檬)</p>
-							<div class="price">NT$ <span>280</span></div>
-							<h4>沃土甘露</h4>
-							<p>(台灣洛神花,伏特加,氣泡水,糖)</p>
-							<div class="price">NT$ <span>310</span></div>
-							<h4>台灣在地精釀啤酒</h4>
-							<div class="price">NT$ <span>160</span></div>
+						<h3>甜點</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>暖嶼甜薯提拉米蘇</h4>
+								<p>(台灣地瓜,龍眼蜜 ,咖啡酒,馬斯卡彭)</p>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
 							<div class="menu-pic">
-								<img src="index-pic/reservation-background.png" alt="" />
+								<img src="menu-pic/tiramisu.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>島嶼鳳梨冰淇淋</h4>
+								<p>(台灣鳳梨, 鮮奶油, 焦糖, 海鹽)</p>
+								<div class="price">NT$ <span>130</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/ice cream.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>沃土茶香戚風蛋糕</h4>
+								<p>(台灣焙茶,麵粉,鮮奶油)</p>
+								<div class="price">NT$ <span>100</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/cake.png" alt="" />
 							</div>
 						</div>
 					</div>
+					<div class="menu-card">
+						<h3>酒類</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>暖嶼之光</h4>
+								<p>(台灣金桔,琴酒,蘇打水,迷迭香)</p>
+								<div class="price">NT$ <span>300</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/kumquat-cocktail.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>島嶼微風</h4>
+								<p>(台灣鳳梨,蘭姆酒,薄荷,檸檬)</p>
+								<div class="price">NT$ <span>280</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/pineapple-cocktail.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>沃土甘露</h4>
+								<p>(台灣洛神花,伏特加,氣泡水,糖)</p>
+								<div class="price">NT$ <span>310</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/roselle-cocktail.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>台灣在地精釀啤酒</h4>
+								<div class="price">NT$ <span>160</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/beer.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="menu-card">
+						<h3>無酒精飲品</h3>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>氣泡飲料</h4>
+								<div class="price">NT$ <span>90</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/water.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>當季果汁</h4>
+								<div class="price">NT$ <span>80</span></div>
+							</div>
 
-					<div class="menu-card">
-						<div class="menu-txt">
-							<h3>無酒精飲品</h3>
-							<h4>氣泡飲料</h4>
-							<div class="price">NT$ <span>90</span></div>
-							<h4>當季果汁</h4>
-							<div class="price">NT$ <span>80</span></div>
-							<h4>茶類</h4>
-							<div class="price">NT$ <span>90</span></div>
-							<h4>手沖咖啡</h4>
-							<div class="price">NT$ <span>90</span></div>
 							<div class="menu-pic">
-								<img src="index-pic/coffe.jpg" alt="" />
+								<img src="menu-pic/juice.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>茶類</h4>
+								<div class="price">NT$ <span>90</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/tea.png" alt="" />
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-txt">
+								<h4>手沖咖啡</h4>
+								<div class="price">NT$ <span>90</span></div>
+							</div>
+							<div class="menu-pic">
+								<img src="menu-pic/coffe.jpg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -221,6 +353,12 @@
 					<a href="https://www.facebook.com/?locale=zh_TW"
 						><img src="other-pic/fb.png" alt="Facebook"
 					/></a>
+				</div>
+				<div class="footer-copyright">
+					<p>&copy;2025 Shawn Wu . All rights reserved.</p>
+					<p>
+						本網站為TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+					</p>
 				</div>
 			</div>
 		</footer>

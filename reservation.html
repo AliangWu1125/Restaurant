@@ -68,13 +68,22 @@
 							<li><button class="back-btn">返回</button></li>
 						</ul>
 					</li>
-					<li><a href="reservation.html">線上預約</a></li>
 					<li><a href="contactus.html">聯絡暖嶼</a></li>
+					<li class="reservation-li">
+						<a href="reservation.html">線上預約</a>
+					</li>
 				</ul>
-				<div class="hbmenu">
-					<span></span>
-					<span></span>
-					<span></span>
+				<div class="mobile">
+					<div class="reserve-icon">
+						<a href="reservation.html"
+							><img src="other-pic/reserve-icon.svg" alt=""
+						/></a>
+					</div>
+					<div class="hbmenu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -86,19 +95,39 @@
 					<div class="form-group">
 						<label for="name">姓名</label>
 						<input type="text" id="name" name="name" placeholder="您的姓名" />
+						<span class="error" id="error-name"></span>
 					</div>
 					<div class="form-group">
 						<label for="guests">人數</label>
-						<input type="number" id="guests" name="guests" min="1" value="1" />
+						<input
+							type="number"
+							id="guests"
+							name="guests"
+							min="1"
+							value="1"
+							max="25"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="phone">電話</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							placeholder="您的聯絡電話"
+						/>
+						<span class="error" id="error-phone"></span>
 					</div>
 					<div class="form-group date-time">
 						<div class="date-group">
 							<label for="date">日期</label>
 							<input type="date" id="date" name="date" />
+							<span class="error" id="error-date"></span>
 						</div>
 						<div class="time-group">
 							<label for="time">時間</label>
 							<input type="time" id="time" name="time" />
+							<span class="error" id="error-time"></span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -109,6 +138,15 @@
 						線上訂位
 					</button>
 				</form>
+				<div id="reservationResult" class="reservation-result">
+					<h4>訂位成功！</h4>
+					<p>姓名：<span id="r-name"></span></p>
+					<p>電話：<span id="r-phone"></span></p>
+					<p>人數：<span id="r-guests"></span></p>
+					<p>日期：<span id="r-date"></span></p>
+					<p>時間：<span id="r-time"></span></p>
+					<p>備註：<span id="r-notes"></span></p>
+				</div>
 				<div class="reservation-pic">
 					<img src="reservation-pic/reservation(1).png" alt="訂位示意圖" />
 				</div>
@@ -138,8 +176,15 @@
 						><img src="other-pic/fb.png" alt="Facebook"
 					/></a>
 				</div>
+				<div class="footer-copyright">
+					<p>&copy;2025 Shawn Wu . All rights reserved.</p>
+					<p>
+						本網站為TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。
+					</p>
+				</div>
 			</div>
 		</footer>
 		<script src="sidebar.js"></script>
+		<script src="reservation.js"></script>
 	</body>
 </html>

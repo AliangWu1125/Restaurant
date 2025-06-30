@@ -47,9 +47,14 @@ body {
 	padding: 1rem 0.5rem;
 	box-sizing: border-box;
 }
+.reservation-li a {
+	color: #617f99;
+
+	background-color: #d6dfe6;
+	border-radius: 0.3125rem;
+}
 .menu a:hover {
 	color: #617f99;
-	background-color: #d6dfe6;
 }
 .submenu {
 	display: none;
@@ -64,9 +69,10 @@ body {
 .submenu button {
 	display: none;
 }
-.hbmenu {
+.mobile {
 	display: none;
 }
+
 /* ---------------------------------banner */
 .banner {
 	padding-top: 7%;
@@ -134,7 +140,6 @@ body {
 }
 .about-content .about-img {
 	width: 28.5vw;
-	/* flex-shrink: 1; */
 }
 .about-content .about-img img {
 	width: 100%;
@@ -493,15 +498,11 @@ body {
 .reservation-button {
 	text-decoration: none;
 	display: inline-block;
-	background-color: #fff;
 	color: #617f99;
 	font-size: 1.25rem;
 	border-radius: 6.25rem;
 	padding: 2ex 5em;
 	justify-self: end;
-	transition: background-color 0.3s ease;
-}
-.reservation-button:hover {
 	background-color: #d6dfe6;
 }
 /* -----------------------------footer */
@@ -536,6 +537,12 @@ body {
 	display: flex;
 	column-gap: 2.5rem;
 }
+.footer-copyright {
+	color: #757575;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+}
 @media (max-width: 768px) {
 	.logo img {
 		width: 100px;
@@ -548,12 +555,11 @@ body {
 	}
 	.menu {
 		flex-direction: column;
-		/* flex-wrap: wrap; */
 		text-align: start;
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		background-color: #fff;
 		transition: right 0.3s ease;
@@ -562,8 +568,8 @@ body {
 	}
 	.menu li {
 		position: relative;
-		top: 12vh;
 		flex-basis: 0;
+		top: 12vh;
 		margin-bottom: 5%;
 		width: 35vw;
 	}
@@ -580,7 +586,7 @@ body {
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		transition: right 0.3s ease;
 		border-radius: 0;
@@ -599,11 +605,29 @@ body {
 		color: inherit;
 		background: none;
 	}
+	.reservation-li {
+		display: none;
+	}
 	.menu a:hover {
 		color: inherit;
 		background-color: transparent;
 	}
+	.mobile {
+		display: block;
+	}
+	.reserve-icon {
+		z-index: 10;
+		width: 40px;
+		z-index: 10;
+		position: fixed;
+		right: 15%;
+	}
+	.reserve-icon img {
+		width: 100%;
+		height: auto;
+	}
 	/* -------------------------------------hbmenu */
+
 	.hbmenu {
 		display: block;
 		height: 40px;
@@ -640,9 +664,10 @@ body {
 		top: 50%;
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
+
 	/*----------------------------------------banner*/
 	.banner {
-		padding: 5rem 0.5rem 0;
+		padding: 3rem 0.5rem 0;
 		margin-bottom: 0rem;
 	}
 
@@ -905,6 +930,7 @@ body {
 	}
 	.footer-icon {
 		column-gap: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 	.footer-icon img {
 		width: 8vw;

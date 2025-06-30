@@ -52,7 +52,7 @@ const infoData = [
 ];
 buttons.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
-		e.stopPropagation(); // 避免點擊事件冒泡
+		e.stopPropagation(); 
 
 		const index = parseInt(btn.dataset.index);
 		const data = infoData[index];
@@ -67,13 +67,10 @@ buttons.forEach((btn) => {
 	});
 });
 
-// 點擊關閉按鈕
 closeBtn.addEventListener("click", () => {
 	infoBox.style.display = "none";
 	overlay.style.display = "none";
 });
-
-// 點擊空白區域關閉
 document.addEventListener("click", (e) => {
 	if (
 		!infoBox.contains(e.target) &&

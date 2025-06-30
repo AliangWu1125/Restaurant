@@ -49,9 +49,14 @@ body {
 	padding: 1rem 0.5rem;
 	box-sizing: border-box;
 }
+.reservation-li a {
+	color: #617f99;
+
+	background-color: #d6dfe6;
+	border-radius: 0.3125rem;
+}
 .menu a:hover {
 	color: #617f99;
-	background-color: #d6dfe6;
 }
 .submenu {
 	display: none;
@@ -66,7 +71,7 @@ body {
 .submenu button {
 	display: none;
 }
-.hbmenu {
+.mobile {
 	display: none;
 }
 
@@ -82,12 +87,11 @@ body {
 	}
 	.menu {
 		flex-direction: column;
-		/* flex-wrap: wrap; */
 		text-align: start;
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		background-color: #fff;
 		transition: right 0.3s ease;
@@ -96,8 +100,8 @@ body {
 	}
 	.menu li {
 		position: relative;
-		top: 12vh;
 		flex-basis: 0;
+		top: 12vh;
 		margin-bottom: 5%;
 		width: 35vw;
 	}
@@ -114,7 +118,7 @@ body {
 		position: fixed;
 		top: 0;
 		right: -100%;
-		width: 75vw;
+		width: 70vw;
 		height: 100vh;
 		transition: right 0.3s ease;
 		border-radius: 0;
@@ -133,11 +137,29 @@ body {
 		color: inherit;
 		background: none;
 	}
+	.reservation-li {
+		display: none;
+	}
 	.menu a:hover {
 		color: inherit;
 		background-color: transparent;
 	}
+	.mobile {
+		display: block;
+	}
+	.reserve-icon {
+		z-index: 10;
+		width: 40px;
+		z-index: 10;
+		position: fixed;
+		right: 15%;
+	}
+	.reserve-icon img {
+		width: 100%;
+		height: auto;
+	}
 	/* -------------------------------------hbmenu */
+
 	.hbmenu {
 		display: block;
 		height: 40px;
@@ -175,8 +197,6 @@ body {
 		transform: translate(-50%, -50%) rotate(-45deg);
 	}
 }
-
-/* 主要內容區域樣式 */
 .resercation-content {
 	display: flex;
 	flex-direction: column;
@@ -212,12 +232,24 @@ body {
 #reservationForm {
 	display: flex;
 	flex-direction: column;
-	row-gap: 1.5rem;
+	row-gap: 1rem;
+}
+.error {
+	color: red;
+	font-size: 0.875rem;
+	margin-top: 4px;
+	display: block;
+}
+form label {
+	font-size: 1.25rem;
+	display: inline-block;
+	margin-bottom: 0.5rem;
 }
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group input[type="date"],
 .form-group input[type="time"],
+.form-group input[type="tel"],
 .form-group textarea {
 	width: 100%;
 	padding: 1rem;
@@ -243,12 +275,25 @@ body {
 	font-size: 1rem;
 }
 
-.submit-button:hover {
+.submit-button {
 	background-color: #d6dfe6;
 	color: #617f99;
 	border: none;
 }
-
+.reservation-result {
+	display: none;
+	flex-basis: 30%;
+}
+.reservation-result h4 {
+	font-size: 2.25rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+.reservation-result p {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #5a5a5a;
+}
 .reservation-pic {
 	width: 40.2vw;
 	overflow: hidden;
@@ -345,6 +390,7 @@ body {
 	}
 	.footer-icon {
 		column-gap: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 	.footer-icon img {
 		width: 8vw;
